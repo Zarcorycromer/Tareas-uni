@@ -1,2 +1,298 @@
-# Tareas-uni
-tarea de etica y cultura
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula Abierta · Revista Digital del Sistema Educativo Venezolano</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📖%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#12285c;--am:#f2b705;--rojo:#c8352b;--papel:#fbfaf6;--tinta:#1b1f2a;--gris:#5b6272;--linea:#d9dce4}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:radial-gradient(ellipse at 50% 30%,#2a3a6b,#0d1530 70%);color:var(--tinta);font:15px/1.5 "Newsreader",Georgia,serif;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+h1,h2,h3,h4,.ui{font-family:"Bricolage Grotesque",Arial,sans-serif}
+a{color:var(--azul)}
+.stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;perspective:2400px;min-height:0}
+.wrap{position:relative}s3434
+3
+
+.book{position:absolute;top:0;left:0;transform-origin:0 0;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.4,.1,.2,1)}
+.leaf{position:absolute;top:0;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform .95s cubic-bezier(.45,.05,.25,1)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--papel);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.45)}
+.front{background:linear-gradient(90deg,rgba(0,0,0,.22),rgba(0,0,0,0) 7%),var(--papel);border-radius:0 6px 6px 0}
+.back{transform:rotateY(180deg);background:linear-gradient(270deg,rgba(0,0,0,.22),rgba(0,0,0,0) 7%),var(--papel);border-radius:6px 0 0 6px}
+.m .back{display:none}
+.in{position:absolute;inset:0;padding:30px 30px 44px;overflow:auto;scrollbar-width:thin}
+.back .in{padding-left:34px}.front .in{padding-left:38px}
+.pn{position:absolute;bottom:12px;font:600 12px "Bricolage Grotesque",sans-serif;color:var(--gris)}
+.front .pn{right:22px}.back .pn{left:26px}
+.dark{background:var(--azul);color:#fff}
+.dark.front{background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0) 7%),var(--azul)}
+.dark.back{background:linear-gradient(270deg,rgba(0,0,0,.35),rgba(0,0,0,0) 7%),var(--azul)}
+.cv .in{overflow:hidden}
+.dark .pn{color:#aab6d8}.dark a{color:var(--am)}
+h2{font-size:27px;line-height:1.1;margin:0 0 10px;color:var(--azul)}
+h3{font-size:16px;margin:0 0 4px;color:var(--azul)}h4{font-size:15px;margin:14px 0 6px;color:var(--azul)}
+p{margin:0 0 10px}
+.k{font:600 12px "Bricolage Grotesque",sans-serif;color:var(--gris);margin-bottom:8px}
+.dato{border-left:5px solid var(--am);background:#fff;padding:10px 12px;margin:10px 0;font-size:14.5px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.cards div{border-top:3px solid var(--rojo);background:#fff;padding:8px 10px;font-size:13.5px;line-height:1.4}
+.cards h3{font-size:14px}
+.mas{display:inline-block;margin:4px 6px 4px 0;font:600 12.5px "Bricolage Grotesque",sans-serif;background:var(--azul);color:#fff!important;padding:6px 11px;border-radius:6px;text-decoration:none}
+.mas:hover{background:var(--rojo)}
+.caja{display:block;width:100%;text-align:left;font:inherit;font-size:13.5px;line-height:1.35;padding:8px 10px;border-radius:8px;background:#fff;border:2px solid var(--azul);color:var(--tinta);cursor:pointer;margin:0}
+.caja b{display:block;font-family:"Bricolage Grotesque",sans-serif;color:var(--azul);font-size:14px}
+.caja.s1{background:var(--azul);color:#fff}.caja.s1 b{color:var(--am)}
+.caja.s2{background:var(--rojo);border-color:var(--rojo);color:#fff}.caja.s2 b{color:#fff}
+.caja.mod{border:2px dashed var(--am)}
+.caja:hover,.caja[aria-pressed=true]{outline:3px solid var(--am)}
+.fila{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.fila>*{flex:1 1 90px}
+.panel{background:#fff;border-left:5px solid var(--rojo);padding:10px 12px;margin:10px 0;min-height:64px;font-size:14px}
+details{background:#fff;border:1px solid var(--linea);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:14px}
+summary{cursor:pointer;font:600 14px "Bricolage Grotesque",sans-serif;color:var(--azul)}
+.idx{list-style:none;padding:0;margin:14px 0}
+.idx li{display:flex;gap:10px;border-bottom:1px dotted var(--gris);padding:9px 0;cursor:pointer;font-size:16px}
+.idx li:hover{color:var(--rojo)}.idx li span{flex:1}.idx li b{font:600 13px "Bricolage Grotesque",sans-serif;color:var(--gris)}
+.q{margin:10px 0}.q button{display:block;width:100%;text-align:left;margin:5px 0;padding:8px 11px;font:inherit;font-size:14px;border:2px solid var(--linea);background:#fff;border-radius:8px;cursor:pointer}
+.q button.ok{border-color:#1a7f37;background:#e6f4ea}.q button.mal{border-color:var(--rojo);background:#fdecea}
+.sc{font:600 14px "Bricolage Grotesque",sans-serif}
+ul.refs{padding:0;list-style:none;font-size:13.5px}ul.refs li{padding-left:24px;text-indent:-24px;margin-bottom:10px;word-break:break-word}
+.cover{display:flex;flex-direction:column;justify-content:space-between;height:100%;position:relative;z-index:1}
+.cover h1{font-size:62px;line-height:.92;margin:0;font-weight:800;letter-spacing:-.02em}
+.cover .sub{font-style:italic;font-size:17px;max-width:24ch;margin-top:14px}
+.c1,.c2{position:absolute;border-radius:50%;z-index:0}
+.c1{right:-70px;bottom:-70px;width:250px;height:250px;background:var(--am)}.c2{right:70px;bottom:-110px;width:200px;height:200px;background:var(--rojo)}
+.lg{display:flex;align-items:center;gap:12px;font:600 13px/1.25 "Bricolage Grotesque",sans-serif}
+.lg img{height:64px;background:#fff;padding:5px;border-radius:8px}
+.ficha{background:rgba(255,255,255,.14);padding:10px 12px;border-radius:8px;font-size:13.5px;line-height:1.45}
+.hint{font:600 12px "Bricolage Grotesque",sans-serif;margin-top:8px;animation:n 1.6s ease-in-out infinite}
+@keyframes n{50%{transform:translateX(8px)}}
+.logo-rev{width:70px;height:70px;border-radius:50%;background:var(--am);color:var(--azul);display:grid;place-items:center;font:800 28px "Bricolage Grotesque",sans-serif;margin-bottom:10px}
+svg text{font-family:"Bricolage Grotesque",sans-serif}
+.ctrl{display:flex;gap:14px;align-items:center;padding:10px;color:#fff;font:600 14px "Bricolage Grotesque",sans-serif}
+.ctrl button{font:inherit;background:var(--am);color:var(--azul);border:0;border-radius:8px;padding:8px 16px;cursor:pointer}
+.ctrl button:disabled{opacity:.35;cursor:default}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--rojo);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.leaf,.book{transition-duration:.01s}.hint{animation:none}}
+</style>
+</head>
+<body>
+<main class="stage"><div class="wrap" id="wrap"><div class="book" id="book" aria-live="polite"></div></div></main>
+<div class="ctrl ui"><button id="prev" aria-label="Página anterior">◀ Anterior</button><span id="ind"></span><button id="next" aria-label="Página siguiente">Siguiente ▶</button></div>
+
+<div id="src" hidden>
+<!-- 0 PORTADA -->
+<section data-cover>
+<div class="c1"></div><div class="c2"></div>
+<div class="cover">
+ <div class="lg"><img src="logo-uba.png" alt="Logo de la Universidad Bicentenaria de Aragua" onerror="this.style.display='none'"><span>Universidad Bicentenaria de Aragua<br>Ética y Cultura Universitaria</span></div>
+ <div><h1 class="ui">Aula<br>Abierta</h1><p class="sub">Cómo está hecha, por dentro, la educación venezolana.</p><p class="hint ui">Pasa la página: toca el borde derecho →</p></div>
+ <div class="ficha"><b class="ui">Integrante</b><br>Miguel Ángel Figueira · Sección 1<br>C.I. <span class="ph">V-32.219.286</span><br>Núcleo temático III · Actividad Sumativa N.º 3<br>Tutora: Dra. Mirna Méndez</div>
+</div></section>
+
+<!-- 1 ÍNDICE -->
+<section>
+<div class="k ui">Páginas 2</div><h2 class="ui">Índice</h2>
+<p>Toca un título para ir directo a esa página.</p>
+<ul class="idx">
+<li data-go="2"><span>Principios rectores: el derecho a educarse</span><b>3</b></li>
+<li data-go="3"><span>Principios rectores: lo que dice la ley</span><b>4</b></li>
+<li data-go="4"><span>Organización del sistema: subsistemas</span><b>5</b></li>
+<li data-go="5"><span>Organización del sistema: modalidades</span><b>6</b></li>
+<li data-go="6"><span>Consejo Nacional de Universidades</span><b>7</b></li>
+<li data-go="7"><span>El CNU y la vida universitaria</span><b>8</b></li>
+<li data-go="8"><span>Pon a prueba lo aprendido</span><b>9</b></li>
+<li data-go="9"><span>Conclusiones</span><b>10</b></li>
+<li data-go="10"><span>Referencias</span><b>11</b></li>
+<li data-go="11"><span>Contraportada y carta a los lectores</span><b>12</b></li>
+</ul></section>
+
+<!-- 2 PRINCIPIOS I -->
+<section>
+<div class="k ui">Tema 1 · Principios rectores</div><h2 class="ui">El derecho a educarse</h2>
+<p>Los principios rectores orientan toda la política educativa. Nacen en la Constitución de 1999 y se desarrollan en la Ley Orgánica de Educación (LOE).</p>
+<div class="dato"><b>Idea central:</b> la educación es un derecho humano y un deber social fundamental, democrática, gratuita y obligatoria, y el Estado la asume como función indeclinable (Constitución de la República Bolivariana de Venezuela [CRBV], 2000, art. 102).</div>
+<svg viewBox="0 0 380 120" width="100%" role="img" aria-label="De la Constitución a la escuela">
+<rect x="4" y="8" width="110" height="52" rx="8" fill="#12285c"/><text x="59" y="32" text-anchor="middle" fill="#fff" font-size="13">Constitución</text><text x="59" y="49" text-anchor="middle" fill="#f2b705" font-size="11">arts. 102 y 103</text>
+<rect x="135" y="8" width="110" height="52" rx="8" fill="#c8352b"/><text x="190" y="32" text-anchor="middle" fill="#fff" font-size="13">Ley Orgánica</text><text x="190" y="49" text-anchor="middle" fill="#fff" font-size="11">de Educación 2009</text>
+<rect x="266" y="8" width="110" height="52" rx="8" fill="#f2b705"/><text x="321" y="32" text-anchor="middle" fill="#12285c" font-size="13">Escuela y</text><text x="321" y="49" text-anchor="middle" fill="#12285c" font-size="11">comunidad</text>
+<path d="M114 34h21M245 34h21" stroke="#1b1f2a" stroke-width="3"/>
+<text x="190" y="100" text-anchor="middle" font-size="13" fill="#5b6272">Del principio constitucional a la práctica</text></svg>
+<h4 class="ui">Obligatoria y gratuita</h4>
+<p>La educación es obligatoria en todos sus niveles, desde el maternal hasta el nivel medio diversificado, y la impartida por el Estado es gratuita hasta el pregrado universitario (CRBV, 2000, art. 103).</p>
+<a class="mas" href="https://venezuela.justia.com/estatales/miranda/leyes/ley-organica-de-educacion-2009/gdoc" target="_blank" rel="noopener">Leer la LOE</a></section>
+
+<!-- 3 PRINCIPIOS II -->
+<section>
+<div class="k ui">Tema 1 · Principios rectores</div><h2 class="ui">Lo que dice la ley</h2>
+<p>La LOE enumera los principios en su artículo 3. Estos son los más relevantes:</p>
+<div class="cards">
+<div><h3>Democracia</h3>Participativa y protagónica; responsabilidad social (LOE, 2009, art. 3).</div>
+<div><h3>Igualdad e inclusión</h3>Sin discriminaciones; equidad e igualdad de género (art. 3).</div>
+<div><h3>Soberanía e identidad</h3>Defensa de la soberanía, identidad nacional e integración latinoamericana (art. 3).</div>
+<div><h3>Carácter de la educación</h3>Pública, obligatoria, gratuita, de calidad y laica (art. 3).</div>
+<div><h3>Estado docente</h3>Expresión rectora del Estado en educación (art. 5).</div>
+<div><h3>Corresponsabilidad</h3>Familias, escuela, sociedad y Estado educan juntos (art. 17).</div>
+</div>
+<details><summary>Fines de la educación (art. 15)</summary><p>Entre otros: desarrollar el potencial creativo de cada persona, formar en valores de tolerancia, justicia, paz y derechos humanos, y desarrollar el pensamiento crítico mediante filosofía, lógica y matemáticas (LOE, 2009, art. 15).</p></details>
+<details><summary>Valores fundamentales (art. 3)</summary><p>Respeto a la vida, convivencia armónica, solidaridad, corresponsabilidad, cooperación, tolerancia, valoración del bien común y respeto a la diversidad (LOE, 2009, art. 3).</p></details>
+<a class="mas" href="https://www.redalyc.org/articulo.oa?id=35613218027" target="_blank" rel="noopener">Artículo arbitrado sobre la LOE</a></section>
+
+<!-- 4 SISTEMA I -->
+<section>
+<div class="k ui">Tema 2 · Organización del sistema</div><h2 class="ui">Subsistemas y niveles</h2>
+<p>El sistema educativo es un conjunto organizado de subsistemas, niveles y modalidades (LOE, 2009, art. 24). Toca los recuadros.</p>
+<button class="caja s1" data-d="Subsistema de educación básica: integrado por los niveles de educación inicial, primaria y media (LOE, 2009, art. 25, num. 1)."><b>Subsistema de Educación Básica</b>Inicial, primaria y media</button>
+<div class="fila">
+<button class="caja" data-d="Educación inicial: etapas de maternal y preescolar, para niños y niñas de cero a seis años (LOE, 2009, art. 25)."><b>Inicial</b>0 a 6 años</button>
+<button class="caja" data-d="Educación primaria: dura seis años y conduce al certificado de educación primaria (LOE, 2009, art. 25)."><b>Primaria</b>6 años</button>
+<button class="caja" data-d="Educación media: media general (cinco años, de primero a quinto) o media técnica (seis años, de primero a sexto); ambas conducen a un título (LOE, 2009, art. 25)."><b>Media</b>General o técnica</button>
+</div>
+<button class="caja s2" data-d="Subsistema de educación universitaria: comprende los niveles de pregrado y postgrado; su duración, requisitos y títulos los define la ley especial (LOE, 2009, art. 25, num. 2)."><b>Subsistema de Educación Universitaria</b>Pregrado y postgrado</button>
+<div class="fila">
+<button class="caja" data-d="Pregrado: primer nivel universitario. El Estado garantiza la gratuidad en instituciones oficiales hasta este nivel (LOE, 2009, art. 6)."><b>Pregrado</b>Primer nivel</button>
+<button class="caja" data-d="Postgrado: segundo nivel del subsistema universitario (LOE, 2009, art. 25)."><b>Postgrado</b>Segundo nivel</button>
+</div>
+<div class="panel" aria-live="polite">Selecciona un recuadro para ver su detalle.</div>
+<a class="mas" href="https://www.mppe.gob.ve" target="_blank" rel="noopener">Ministerio de Educación</a></section>
+
+<!-- 5 SISTEMA II -->
+<section>
+<div class="k ui">Tema 2 · Organización del sistema</div><h2 class="ui">Las modalidades</h2>
+<p>Son variantes educativas para personas que, por sus condiciones culturales, étnicas, lingüísticas u otras, requieren adaptaciones curriculares permanentes o temporales (LOE, 2009, art. 26).</p>
+<div class="fila">
+<button class="caja mod" data-d="Educación especial: garantiza el acceso de personas con necesidades educativas o discapacidad (LOE, 2009, arts. 6 y 26).">Especial</button>
+<button class="caja mod" data-d="Educación de jóvenes, adultos y adultas (LOE, 2009, art. 26).">Jóvenes y adultos</button>
+<button class="caja mod" data-d="Educación en fronteras: atención integral de quienes habitan la frontera venezolana, fortaleciendo soberanía y cultura de paz (LOE, 2009, art. 28).">Fronteras</button>
+<button class="caja mod" data-d="Educación rural: formación integral en contextos rurales, con arraigo al hábitat y articulación campo-ciudad (LOE, 2009, art. 29).">Rural</button>
+<button class="caja mod" data-d="Educación para las artes (LOE, 2009, art. 26).">Artes</button>
+<button class="caja mod" data-d="Educación militar: forma a integrantes de la Fuerza Armada Nacional Bolivariana (LOE, 2009, art. 30).">Militar</button>
+<button class="caja mod" data-d="Educación intercultural: atraviesa todo el sistema y valora las culturas originarias y afrodescendientes (LOE, 2009, art. 27).">Intercultural</button>
+<button class="caja mod" data-d="Educación intercultural bilingüe: obligatoria e irrenunciable en planteles de regiones con población indígena (LOE, 2009, art. 27).">Intercultural bilingüe</button>
+</div>
+<div class="panel" aria-live="polite">Toca una modalidad.</div>
+<details><summary>¿Una modalidad es un nivel?</summary><p>No. Las modalidades adaptan la enseñanza dentro del sistema; la duración, requisitos y títulos se definen en la ley especial de educación básica y de educación universitaria (LOE, 2009, art. 26).</p></details>
+<a class="mas" href="https://venezuela.justia.com/estatales/miranda/leyes/ley-organica-de-educacion-2009/gdoc" target="_blank" rel="noopener">Arts. 24 al 36 de la LOE</a></section>
+
+<!-- 6 CNU I -->
+<section>
+<div class="k ui">Tema 3 · Consejo Nacional de Universidades</div><h2 class="ui">¿Qué es el CNU?</h2>
+<div class="dato">El CNU es el organismo encargado de asegurar el cumplimiento de la Ley de Universidades por las universidades y de coordinar las relaciones de ellas entre sí y con el Estado (Ley de Universidades, 1970, art. 18).</div>
+<p>Cuenta además con organismos de planificación educativa que le sirven de asesoría técnica (art. 18).</p>
+<svg viewBox="0 0 380 150" width="100%" role="img" aria-label="Línea de tiempo del marco legal universitario">
+<line x1="20" y1="60" x2="360" y2="60" stroke="#1b1f2a" stroke-width="3"/>
+<a href="https://www.ciencias.ula.ve/Ley/documentos/LeydeUniversidadesVigente.pdf" target="_blank"><circle cx="60" cy="60" r="11" fill="#12285c"/><text x="60" y="40" text-anchor="middle" font-size="15" fill="#1b1f2a">1970</text><text x="60" y="95" text-anchor="middle" font-size="11" fill="#1b1f2a">Ley de</text><text x="60" y="108" text-anchor="middle" font-size="11" fill="#1b1f2a">Universidades</text></a>
+<a href="https://venezuela.justia.com/estatales/miranda/leyes/ley-organica-de-educacion-2009/gdoc" target="_blank"><circle cx="190" cy="60" r="11" fill="#f2b705"/><text x="190" y="40" text-anchor="middle" font-size="15" fill="#1b1f2a">2000</text><text x="190" y="95" text-anchor="middle" font-size="11" fill="#1b1f2a">Constitución</text><text x="190" y="108" text-anchor="middle" font-size="11" fill="#1b1f2a">vigente</text></a>
+<a href="https://www.redalyc.org/articulo.oa?id=35613218027" target="_blank"><circle cx="320" cy="60" r="11" fill="#c8352b"/><text x="320" y="40" text-anchor="middle" font-size="15" fill="#1b1f2a">2009</text><text x="320" y="95" text-anchor="middle" font-size="11" fill="#1b1f2a">Ley Orgánica</text><text x="320" y="108" text-anchor="middle" font-size="11" fill="#1b1f2a">de Educación</text></a>
+<text x="190" y="140" text-anchor="middle" font-size="11" fill="#5b6272">Toca cada fecha para abrir la fuente</text></svg>
+<a class="mas" href="https://www.ciencias.ula.ve/Ley/documentos/LeydeUniversidadesVigente.pdf" target="_blank" rel="noopener">Ley de Universidades</a></section>
+
+<!-- 7 CNU II -->
+<section>
+<div class="k ui">Tema 3 · Consejo Nacional de Universidades</div><h2 class="ui">El CNU y la vida universitaria</h2>
+<h4 class="ui">¿Quiénes lo integran?</h4>
+<p>Lo preside el Ministro de Educación e integran los rectores de las universidades nacionales y privadas, junto con otros representantes que establece el artículo 19 (Ley de Universidades, 1970, art. 19).</p>
+<h4 class="ui">Principios de la educación universitaria</h4>
+<p>La LOE señala como principios rectores de este subsistema, entre otros, la calidad, la innovación, el pensamiento crítico y reflexivo, la inclusión, la pertinencia, la formación integral, la autonomía, la libertad y la justicia social (LOE, 2009, art. 33).</p>
+<details><summary>Libertad académica (art. 36)</summary><p>Es el derecho inalienable a crear, exponer o aplicar enfoques metodológicos y perspectivas teóricas conforme a la Constitución y la ley (LOE, 2009, art. 36).</p></details>
+<details><summary>¿Qué relación tiene con la ética universitaria?</summary><p>Los principios del artículo 33 funcionan como una guía de conducta para toda la comunidad universitaria: estudiar con rigor, pensar críticamente y respetar la diversidad y los derechos humanos.</p></details>
+<a class="mas" href="http://www.opsu.gob.ve" target="_blank" rel="noopener">OPSU</a>
+<a class="mas" href="https://venezuela.justia.com/federales/leyes/ley-de-universidades/gdoc" target="_blank" rel="noopener">Ley de Universidades (Justia)</a></section>
+
+<!-- 8 REPASO -->
+<section>
+<div class="k ui">Autoevaluación</div><h2 class="ui">Pon a prueba lo aprendido</h2>
+<div class="q" data-a="0"><b>¿Qué artículo de la LOE enumera los principios de la educación?</b><button>Artículo 3</button><button>Artículo 26</button><button>Artículo 100</button></div>
+<div class="q" data-a="1"><b>¿Cuántos años dura la educación media técnica?</b><button>Cinco</button><button>Seis</button><button>Siete</button></div>
+<div class="q" data-a="2"><b>¿Cuál es una modalidad del sistema?</b><button>Postgrado</button><button>Preescolar</button><button>Educación rural</button></div>
+<div class="q" data-a="0"><b>¿Quién preside el CNU según la Ley de Universidades?</b><button>El Ministro de Educación</button><button>Un rector elegido por voto</button><button>El Presidente de la Asamblea</button></div>
+<p class="sc">Aciertos: 0 de 0</p></section>
+
+<!-- 9 CONCLUSIONES -->
+<section>
+<div class="k ui">Cierre</div><h2 class="ui">Conclusiones</h2>
+<p>La Constitución y la LOE reconocen la educación como derecho humano y deber social, gratuita en instituciones oficiales hasta el pregrado universitario, y comprometen al Estado, la familia y la sociedad (CRBV, 2000, arts. 102 y 103; LOE, 2009, arts. 3, 6 y 17).</p>
+<p>El sistema se organiza en dos subsistemas, básico y universitario, y en ocho modalidades que adaptan la enseñanza a poblaciones específicas (LOE, 2009, arts. 25 y 26).</p>
+<p>El CNU asegura el cumplimiento de la Ley de Universidades y coordina a las universidades entre sí y con el Estado (Ley de Universidades, 1970, art. 18).</p>
+<p>Conocer este marco legal nos prepara para ejercer nuestros derechos y actuar con ética como miembros de la comunidad universitaria.</p></section>
+
+<!-- 10 REFERENCIAS -->
+<section>
+<div class="k ui">Fuentes</div><h2 class="ui">Referencias</h2>
+<ul class="refs">
+<li>Constitución de la República Bolivariana de Venezuela. (2000, 24 de marzo). <i>Gaceta Oficial de la República Bolivariana de Venezuela</i>, 5.453 (Extraordinario).</li>
+<li>Ley de Universidades. (1970, 8 de septiembre). <i>Gaceta Oficial de la República de Venezuela</i>, 1.429 (Extraordinario). <a href="https://www.ciencias.ula.ve/Ley/documentos/LeydeUniversidadesVigente.pdf" target="_blank" rel="noopener">https://www.ciencias.ula.ve/Ley/documentos/LeydeUniversidadesVigente.pdf</a></li>
+<li>Ley Orgánica de Educación. (2009, 15 de agosto). <i>Gaceta Oficial de la República Bolivariana de Venezuela</i>, 5.929 (Extraordinario). <a href="https://venezuela.justia.com/estatales/miranda/leyes/ley-organica-de-educacion-2009/gdoc" target="_blank" rel="noopener">https://venezuela.justia.com/estatales/miranda/leyes/ley-organica-de-educacion-2009/gdoc</a></li>
+<li>Moreno García, J. P. (2009). Una mirada desde la historia de la educación a la nueva Ley Orgánica de Educación (2009): Consistencias e inconsistencias epistemológicas. <i>Educere, 13</i>(46), 829-842. <a href="https://www.redalyc.org/articulo.oa?id=35613218027" target="_blank" rel="noopener">https://www.redalyc.org/articulo.oa?id=35613218027</a></li>
+</ul></section>
+
+<!-- 11 CONTRAPORTADA -->
+<section data-dark>
+<div class="logo-rev ui">AA</div><h2 class="ui" style="color:#f2b705">Aula Abierta</h2>
+<h4 class="ui" style="color:#fff">Presentación</h4>
+<p>Revista digital del Sistema Educativo Venezolano, elaborada para la asignatura Ética y Cultura Universitaria (Núcleo temático III, Actividad Sumativa N.º 3) de la Universidad Bicentenaria de Aragua.</p>
+<h4 class="ui" style="color:#fff">Carta a los lectores</h4>
+<p>Estimado lector: conocer cómo funciona la educación no es asunto solo de docentes. Es saber qué derechos nos protegen, cómo se organizan las escuelas y universidades y quién coordina la educación universitaria. Espero que estas páginas te sirvan para seguir investigando.</p>
+<p><i>Miguel Ángel Figueira<br>Sección 1 · C.I. <span class="ph">V-32.219.286</span></i></p>
+<a href="https://pregrado.campusvirtualuba.net.ve/trimestre/mod/page/view.php?id=10480" target="_blank" rel="noopener">Contenido del núcleo en el campus virtual</a></section>
+</div>
+
+<script>
+(function(){
+var BW=440,BH=620,book=document.getElementById('book'),wrap=document.getElementById('wrap'),src=document.getElementById('src'),
+pages=[].slice.call(src.children),N=pages.length,mode='',leaves=[],cur=0,s=1,busy=0,
+ind=document.getElementById('ind'),pv=document.getElementById('prev'),nx=document.getElementById('next');
+function face(i,cls){var sec=pages[i],f=document.createElement('div');
+f.className='face '+cls+(sec.hasAttribute('data-cover')||sec.hasAttribute('data-dark')?' dark':'')+(sec.hasAttribute('data-cover')?' cv':'');
+f.innerHTML='<div class="in">'+sec.innerHTML+'</div><div class="pn">'+(i+1)+'</div>';return f}
+function build(m){mode=m;book.innerHTML='';leaves=[];book.className='book '+(m==='m'?'m':'d');
+var cnt=m==='m'?N:N/2;
+for(var i=0;i<cnt;i++){var l=document.createElement('div');l.className='leaf';
+l.style.width=(m==='m'?BW:BW)+'px';l.style.left=(m==='m'?0:BW)+'px';
+if(m==='m')l.appendChild(face(i,'front'));else{l.appendChild(face(2*i,'front'));l.appendChild(face(2*i+1,'back'))}
+book.appendChild(l);leaves.push(l)}}
+function total(){return leaves.length}
+function z(){leaves.forEach(function(l,i){l.style.zIndex=i<cur?i:total()-i})}
+function apply(){leaves.forEach(function(l,i){l.style.transform=i<cur?'rotateY(-180deg)':'rotateY(0)'});
+var t=0,n=total();if(mode==='d'){if(cur===0)t=-BW/2;else if(cur===n)t=BW/2}
+book.style.transform='translateX('+(t*s)+'px) scale('+s+')';
+var a,b;
+if(mode==='m')ind.textContent='Página '+(cur+1)+' de '+N;
+else{a=cur===0?1:2*cur;b=cur===0?1:Math.min(2*cur+1,N);ind.textContent=cur===0?'Portada':cur===n?'Contraportada':'Páginas '+a+'–'+b+' de '+N}
+pv.disabled=cur===0;nx.disabled=cur===total()}
+function go(k){k=Math.max(0,Math.min(total(),k));if(k===cur)return;
+var lo=Math.min(k,cur),hi=Math.max(k,cur);for(var i=lo;i<hi;i++)leaves[i].style.zIndex=total()+5;
+cur=k;apply();setTimeout(z,480)}
+function goPage(p){go(mode==='m'?p:Math.ceil(p/2))}
+function fit(){var m=innerWidth<900?'m':'d',pg=cur===0?0:(mode==='m'?cur:2*cur-1);
+var w=m==='m'?BW:2*BW;s=Math.min((innerWidth-16)/w,(innerHeight-70)/BH,1.2);
+wrap.style.width=(w*s)+'px';wrap.style.height=(BH*s)+'px';
+book.style.width=(m==='m'?BW:2*BW)+'px';book.style.height=BH+'px';
+if(m!==mode){build(m);cur=m==='m'?pg:Math.ceil(pg/2);z()}
+leaves.forEach(function(l){l.style.height=BH+'px'});apply()}
+pv.onclick=function(){go(cur-1)};nx.onclick=function(){go(cur+1)};
+addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+addEventListener('resize',fit);
+var tx=null;book.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+book.addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>60)go(cur+(d<0?1:-1))});
+book.addEventListener('click',function(e){var t=e.target;
+var d=t.closest('[data-d]');if(d){var f=d.closest('.in');f.querySelectorAll('[data-d]').forEach(function(x){x.setAttribute('aria-pressed','false')});d.setAttribute('aria-pressed','true');f.querySelector('.panel').textContent=d.getAttribute('data-d');return}
+var g=t.closest('[data-go]');if(g){goPage(+g.getAttribute('data-go'));return}
+var q=t.closest('.q button');if(q){var box=q.parentNode;if(box.dataset.r)return;box.dataset.r=1;
+var bs=[].slice.call(box.querySelectorAll('button')),a=+box.getAttribute('data-a');bs[a].className='ok';
+if(bs[a]!==q)q.className='mal';var sc=box.parentNode.querySelector('.sc');
+var h=+(sc.dataset.h||0)+1,o=+(sc.dataset.o||0)+(bs[a]===q?1:0);sc.dataset.h=h;sc.dataset.o=o;
+sc.textContent='Aciertos: '+o+' de '+h+(h===4?' · ¡Listo!':'');return}
+if(t.closest('a,button,summary,details'))return;
+var r=book.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,vis=mode==='m'?[0,1]:(cur===0?[.5,1]:cur===total()?[0,.5]:[0,1]);
+var xx=vis[0]+x*(vis[1]-vis[0]);
+if(mode==='m'){if(x<.14)go(cur-1);else if(x>.86)go(cur+1)}
+else{var rel=e.clientX-r.left,w=r.width;if(rel<w*.12)go(cur-1);else if(rel>w*.88)go(cur+1)}});
+fit();
+})();
+</script>
+</body>
+</html>
